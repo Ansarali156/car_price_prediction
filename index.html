@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Car Price Prediction</h2>
+
+    <div class="container">
+        <label>Car Name</label>
+        <input type="text" id="name" placeholder="Maruti Swift VDI">
+
+        <label>Year</label>
+        <input type="number" id="year" placeholder="2020">
+
+        <label>Fuel Type</label>
+        <select id="fuel">
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+            <option value="cng">CNG</option>
+            <option value="lpg">LPG</option>
+            <option value="electric">Electric</option>
+        </select>
+
+        <label>Seller Type</label>
+        <select id="seller_type">
+            <option value="dealer">Dealer</option>
+            <option value="individual">Individual</option>
+            <option value="trustmark dealer">Trustmark Dealer</option>
+        </select>
+
+        <label>KMs Driven</label>
+        <input type="number" id="km_driven" placeholder="50000">
+
+        <label>Transmission</label>
+        <select id="transmission">
+            <option value="manual">Manual</option>
+            <option value="automatic">Automatic</option>
+        </select>
+
+        <label>Owner</label>
+        <select id="owner">
+            <option value="first owner">First Owner</option>
+            <option value="second owner">Second Owner</option>
+            <option value="third owner">Third Owner</option>
+            <option value="fourth & above owner">Fourth & Above Owner</option>
+            <option value="test drive car">Test Drive Car</option>
+        </select>
+
+        <button onclick="predict()">Predict</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
