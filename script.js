@@ -28,7 +28,7 @@ function predict() {
                 "Error: " + response.error;
         } else {
             document.getElementById("result").innerHTML =
-                "Predicted Price: ₹ " + response.price;
+                "Predicted Price: ₹ " + response.price + "'<br> R2_SCORE : " + response.r2;
         }
     })
     .catch(err => {
