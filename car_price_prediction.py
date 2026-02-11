@@ -30,6 +30,7 @@ app.add_middleware(
 # Train model once at startup
 df = pd.read_csv("car_dataset.csv")
 
+df["name"] = df["name"].str.split().str[0]
 encoders = {}
 features = ["name", "fuel", "seller_type", "transmission", "owner"]
 for feature in features:
@@ -48,6 +49,7 @@ r2 = r2_score(y_test,model.predict(x_test))
 @app.post("/predict")
 def predict(data: CarData):
     try:
+        data.name = data.name.str.split()[0]
         # Encode categorical features
         input_dict = {
             "name": encoders["name"].transform([data.name.lower()])[0],
